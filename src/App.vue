@@ -1,85 +1,92 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <el-config-provider>
+    <!--
+  Welcome to Tailwind Play, the official Tailwind CSS playground!
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  Everything here works just like it does when you're running Tailwind locally
+  with a real build pipeline. You can customize your config file, use features
+  like `@apply`, or even add third-party plugins.
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  Feel free to play with this example if you're just learning, or trash it and
+  start from scratch if you know enough to be dangerous. Have fun!
+-->
+    <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+      <img
+        src="/img/beams.jpg"
+        alt=""
+        class="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
+        width="1308"
+      />
+      <div
+        class="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
+      ></div>
+      <div
+        class="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10"
+      >
+        <div class="mx-auto max-w-md">
+          <img src="/img/logo.svg" class="h-6" alt="Tailwind Play" />
+          <div class="divide-y divide-gray-300/50">
+            <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
+              <p>An advanced online playground for Tailwind CSS, including support for things like:</p>
+              <ul class="space-y-4">
+                <li class="flex items-center">
+                  <svg
+                    class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="11" />
+                    <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                  </svg>
+                  <p class="ml-4">
+                    Customizing your
+                    <code class="text-sm font-bold text-gray-900">tailwind.config.js</code> file
+                  </p>
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="11" />
+                    <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                  </svg>
+                  <p class="ml-4">
+                    Extracting classes with
+                    <code class="text-sm font-bold text-gray-900">@apply</code>
+                  </p>
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="11" />
+                    <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                  </svg>
+                  <p class="ml-4">Code completion with instant preview</p>
+                </li>
+              </ul>
+              <p>
+                Perfect for learning how the framework works, prototyping a new idea, or creating a demo to share
+                online.
+              </p>
+            </div>
+            <div class="pt-8 text-base font-semibold leading-7">
+              <p class="text-gray-900">Want to dig deeper into Tailwind?</p>
+              <p>
+                <a href="https://tailwindcss.com/docs" class="text-sky-500 hover:text-sky-600">Read the docs &rarr;</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
-
-  <RouterView />
+  </el-config-provider>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
+<style scoped></style>

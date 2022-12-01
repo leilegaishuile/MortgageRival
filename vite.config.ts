@@ -1,15 +1,28 @@
-import { fileURLToPath, URL } from "node:url";
+import { fileURLToPath, URL } from 'node:url';
 
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./",
-  plugins: [vue()],
+  base: './',
+  envDir: './env',
+  plugins: [
+    vue(),
+    AutoImport({
+      imports: ['vue', 'vue-router'],
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
+  ],
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
   server: {
@@ -18,7 +31,7 @@ export default defineConfig({
     // 端口号
     port: 3000,
     // 监听所有地址
-    host: "0.0.0.0",
+    host: '0.0.0.0',
     // 服务启动时是否自动打开浏览器
     open: true,
     // 允许跨域
@@ -28,7 +41,7 @@ export default defineConfig({
   },
   build: {
     // 设置最终构建的浏览器兼容目标
-    target: "es2015",
+    target: 'es2015',
     // 构建后是否生成 source map 文件
     sourcemap: false,
     //  chunk 大小警告的限制（以 kbs 为单位）
