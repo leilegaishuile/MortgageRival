@@ -3,13 +3,7 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
   root: true,
-  extends: [
-    'plugin:vue/vue3-essential',
-    'plugin:prettier/recommended',
-    'eslint:recommended',
-    '@vue/eslint-config-typescript',
-    '@vue/eslint-config-prettier',
-  ],
+  extends: ['plugin:vue/vue3-essential', 'plugin:prettier/recommended', 'eslint:recommended', '@vue/eslint-config-typescript', '@vue/eslint-config-prettier', './.eslintrc-auto-import.json'],
   env: {
     node: true,
   },
@@ -17,13 +11,15 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: {
+    // 关闭名称校验
+    'vue/multi-word-component-names': 'off',
     // 禁止使用多余的包
     'import/no-extraneous-dependencies': 0,
     // 确保在导入路径内一致使用文件扩展名
     'import/extensions': 0,
     // 确保导入指向可以解析的文件/模块
     'import/no-unresolved': 0,
-    // 首选默认导出导入/首选默认导出
+    // 首选默认导出导入/首选默认导出// 关闭名称校验
     'import/prefer-default-export': 0,
     // 要求使用 let 或 const 而不是 var
     'no-var': 'error',

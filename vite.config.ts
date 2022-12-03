@@ -15,8 +15,13 @@ export default defineConfig({
     AutoImport({
       imports: ['vue', 'vue-router'],
       resolvers: [ElementPlusResolver()],
+      eslintrc: {
+        enabled: true,
+      },
     }),
     Components({
+      dirs: ['src/components'],
+      deep: true,
       resolvers: [ElementPlusResolver()],
     }),
   ],
