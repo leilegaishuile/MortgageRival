@@ -1,0 +1,5 @@
+{
+  "liveServer.settings.port": 5502,
+  "css.lint.unknownAtRules": "ignore",
+  "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass", "html"]
+}

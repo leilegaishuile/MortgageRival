@@ -36,6 +36,7 @@
 .content-left {
   @apply left-6 xl:left-36 md:left-16 sm:left-12;
 }
+
 .item-mb {
   @apply mb-5 sm:mb-10 md:mb-28;
 }
