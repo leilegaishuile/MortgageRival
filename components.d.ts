@@ -7,14 +7,10 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    ContentItem: typeof import('./src/components/home/ContentItem.vue')['default']
-    ContentLeftItem: typeof import('./src/components/home/ContentLeftItem.vue')['default']
-    ElButton: typeof import('element-plus/es')['ElButton']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     Footer: typeof import('./src/components/home/Footer.vue')['default']
     Header: typeof import('./src/components/home/Header.vue')['default']
     HeroHome: typeof import('./src/components/home/HeroHome.vue')['default']
-    Home: typeof import('./src/views/Home.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SloganLeftItem: typeof import('./src/components/home/SloganLeftItem.vue')['default']

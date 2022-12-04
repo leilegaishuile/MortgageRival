@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="flex flex-col min-h-screen overflow-hidden bg-gray-50">
+  <div class="flex flex-col min-h-screen overflow-hidden bg-white">
     <Header />
     <HeroHome />
     <Footer />
